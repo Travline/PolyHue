@@ -1,0 +1,33 @@
+header {
+    height: 80px;
+    display: grid;
+    padding: 0 50px 0 50px;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        a {
+            text-decoration: none;
+            padding: 10px 0 0 0;
+            margin: 0;
+            font-family: 'Bagel Fat One';
+            font-weight: 400;
+            color: #4B5FE6;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    }
+    .generate-palette-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-actions-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+    }
+}

@@ -1,0 +1,13 @@
+a {
+    text-decoration: none;
+    color: #E64BAD;
+}
+button {
+    background-color: rgb(0 0 0 / 0%);
+}
+button:hover {
+    background-color: #E64BAD;
+    a {
+        color: #FFFFFF;
+    }
+}
