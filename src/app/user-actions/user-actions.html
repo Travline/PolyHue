@@ -1,20 +1,20 @@
 <!--CONDICIONAL SEGUN ESTADO DEL USUARIO (LOGEADO O NO)-->
 @if (false) {
-    <button class = "register-button left-button">
-        <a href="">Registrarse</a>
+    <button class = "register-button">
+        <a routerLink="/register">Registrarse</a>
     </button>
-    <button class = "login-button">
-        <a href="">Iniciar Sesión</a>
+    <button class = "login-button right-button">
+        <a routerLink="/login">Iniciar Sesión</a>
     </button>
 }
 @else {
-    <button class = "saved-palettes-button left-button">
-        <a href="">Guardados</a>
+    <button class = "saved-palettes-button">
+        <a routerLink="/saved-palttes">Guardados</a>
     </button>
     <!--DEPENDE DE LA RUTA HOMEPAGE -> FALSE-->
     @if (false) {
         <!--QUEDA PENDIENTE VER SI ESTO SE HACE UN COMPONENTE APARTE-->
-        <button type="button" class = "save-palette-button">
+        <button routerLink="/generated" type="button" class = "save-palette-button right-button">
             <svg xmlns="http://www.w3.org/2000/svg"
                 width="24" height="24" viewBox="0 0 24 24"
                 fill="#FFFFFF" stroke="none" stroke-width="3"
