@@ -2,6 +2,11 @@
   <div class="logo-container">
     <a href="index.html">PolyHue</a>
   </div>
-    <app-generate-palette class="generate-palette-container"></app-generate-palette>
+    <!--DEPENDERA DE LA RUTA HACIENDO USO DEL ENRUTADOR-->
+    @if (false) {
+      <app-generate-palette class="generate-palette-container"></app-generate-palette>
+    } @else {
+      <div></div>
+    }
     <app-user-actions class="user-actions-container"></app-user-actions>
 </header>
