@@ -11,8 +11,6 @@ import { SplitHexPalettePipe } from '../palette/split-hex-palette-pipe';
 })
 export class GeneratedPage implements OnInit {
   palette: string = '';
-  colors: string[] | undefined;
-
   constructor(private route: ActivatedRoute) {
   }
 
@@ -20,5 +18,10 @@ export class GeneratedPage implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.palette = params.get('palette') || '';
     });
+  }
+
+  copyToClipboard(text: string): void {
+    if(!navigator.clipboard){return;}
+    navigator.clipboard.writeText(text);
   }
 }
