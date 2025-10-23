@@ -1,3 +1,15 @@
-<main class="color-palette">
-    <div>{{ palette }}</div>
-</main>
+@let colors = palette | splitHexPalette;
+@if (colors === undefined) {
+    <main>404</main>
+}
+@else {
+    <main class="color-palette">
+        @for (color of colors; track $index) {
+            <div class="color-container"
+                 [id]="$index"
+                 [style.background-color]="color">
+                color {{ color }}
+            </div>
+        }
+    </main>
+}

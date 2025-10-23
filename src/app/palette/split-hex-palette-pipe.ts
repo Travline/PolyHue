@@ -5,12 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 
 export class SplitHexPalettePipe implements PipeTransform {
-  transform(palette: string): string[] {
-    const pattern: RegExp = /^[0-9A-F]{5}(?:-[0-9A-F]{5}){4}$/i;
+  transform(palette: string): string[] | undefined{
+    const pattern: RegExp = /^[0-9A-F]{6}(?:-[0-9A-F]{6}){4}$/i;
     if (pattern.test(palette)) {
-      palette.toUpperCase();
+      palette = palette.toUpperCase();
       return palette.split('-').map(hex => '#' + hex);
     }
-    return [];
+    return undefined;
   }
 }
