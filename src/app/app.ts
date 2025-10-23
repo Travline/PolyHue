@@ -5,7 +5,7 @@ import { GeneratePalette } from "./generate-palette/generate-palette";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, GeneratePalette],
+  imports: [RouterOutlet, Header],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
