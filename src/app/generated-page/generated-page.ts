@@ -11,9 +11,11 @@ import { SplitHexPalettePipe } from '../palette/split-hex-palette-pipe';
 })
 export class GeneratedPage implements OnInit {
   palette: string = '';
+  url: string = '';
   constructor(private route: ActivatedRoute) {
   }
-
+  
+  params: string[] = [];
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.palette = params.get('palette') || '';

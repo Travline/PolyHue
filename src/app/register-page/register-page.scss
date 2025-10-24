@@ -1,0 +1,22 @@
+div {  
+    text-align: center;
+    .primary-text {
+        font-size: 64px;
+        margin: 0;
+    }
+    .secondary-text {
+        font-size: 40px;
+        margin: 0;
+        span {
+            font-size: 40px;
+            margin: 0;
+            color: #E64BAD;
+        }
+    }
+}
+form {
+    button {
+        background-color: #E64BAD;
+        color: #FFFFFF  ;
+    }
+}
